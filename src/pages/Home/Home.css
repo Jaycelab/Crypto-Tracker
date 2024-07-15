@@ -1,0 +1,82 @@
+.home {
+  padding: 0 10px;
+  padding-bottom: 100px;
+}
+
+.hero {
+  max-width: 600px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.hero h1 {
+  font-size: max(4vw, 36px);
+  font-weight: 700;
+}
+
+.hero p {
+  width: 75%;
+  color: #e3e3e3;
+  line-height: 1.5;
+}
+
+.hero form {
+  padding: 8px;
+  width: 80%;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.hero input {
+  flex: 1;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  color: #000;
+  padding-left: 10px;
+}
+
+.hero input::placeholder {
+  color: #000;
+  font-size: 1.2rem;
+}
+
+.hero button {
+  background-color: #929da8;
+  color: #000;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background-color: #4a5c6e;
+  color: #fff;
+}
+
+.crypto-table {
+  max-width: 800px;
+  margin: 0 auto;
+
+  background: linear-gradient(90deg, #4a5c6e 0%, #929da8 100%);
+  border-radius: 15px;
+}
+
+.table-layout {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1.5fr 1.5fr 1fr;
+  padding: 15px 20px;
+  align-items: center;
+  border-bottom: 1px solid #4a5c6e;
+}
