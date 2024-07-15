@@ -1,20 +1,31 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Home.css";
+import { CoinContext } from "../../context/CoinContext";
 
 const Home = () => {
+  const { allCoins, currency } = useContext(CoinContext);
+  const [displayCoins, setDisplayCoins] = useState([]);
+
+  {
+    /*useEffect to update displayCoins when allCoins gets updated*/
+  }
+  useEffect(() => {
+    setDisplayCoins(allCoins);
+  }, [allCoins]);
+
   return (
     <div className="home">
       <div className="hero">
         <h1>
-          Largest <br /> Crypto Center!
+          Largest Crypto <br /> Resource Center
         </h1>
         <p>
-          Welcome to the world's largest knowledge center for Cryptocurrency!
-          Come see why we've been voted the world's rank #9th for the past 69
-          years!
+          Welcome to the world's top leading knowledge center for
+          cryptocurrency! Come see why we've been voted the 9th ranking trading
+          exchange for the past 69 years!
           <br />
           <br />
-          Sign up now to learn more about the world of Cryptocurrency and
+          Sign up now to learn more about the world of cryptocurrency and
           explore <em>some</em> of our features!
         </p>
         {/* search */}
@@ -29,10 +40,28 @@ const Home = () => {
           <p>#</p>
           <p>Coins</p>
           <p>Price</p>
-          <p>24H Change</p>
-          <p>24H Change %</p>
-          <p>Total MC</p>
+          <p style={{ textAlign: "center" }}>24H Change</p>
+          <p style={{ textAlign: "center" }}>24H Change %</p>
+          <p className="market-cap">Marketcap</p>
         </div>
+
+        {/*map through displayCoins to display each coin*/}
+        {displayCoins.slice(0, 10).map((item, index) => (
+          <div className="table-layout" key={index}>
+            <p>{item.market_cap_rank}</p>
+
+            {/*coin name and symbol*/}
+            <div>
+              <img src={item.image} alt="image-logo" />
+              <p className="symbol">{item.name + " - $" + item.symbol}</p>
+            </div>
+
+            {/*price*/}
+            <p>
+              {currency.symbol} {item.current_price}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );
