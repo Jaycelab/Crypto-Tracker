@@ -9,9 +9,10 @@ const Navbar = () => {
       <img src={logo} alt="logo" className="logo" />
       <ul>
         <li>Home</li>
-        <li>Features</li>
-        <li>Pricing</li>
-        <li>Pairs</li>
+        <li>Trade</li>
+        <li>Profits</li>
+        <li>Technical Analysis</li>
+        <li>Contact</li>
       </ul>
 
       {/* right-side */}
@@ -25,7 +26,7 @@ const Navbar = () => {
           <option value="cad">CAD</option>
         </select>
         <button>
-          Sign Up <img src={arrow_icon} alt="arrow icon" />
+          Members <img src={arrow_icon} alt="arrow icon" />
         </button>
       </div>
     </div>

@@ -6,9 +6,18 @@ const Home = () => {
     <div className="home">
       <div lassName="hero">
         <h1>
-          Largest <br /> Crypto Marketplace
+          Largest <br /> Crypto Center!
         </h1>
-        <p>Welcome to the world's largest crypto marketplace. Sign up to explore more features and see why we're the #1 rated crypto trading exchange in the world</p>
+        <p>
+          Welcome to the world's largest learning center for Cryptocurrency!
+          Come see why we've been voted rank #11 for the past 40 years (way
+          before Crypto even existed including the person responsible making
+          this webpage)
+        </p>
+        <form>
+          <input type="text" placeholder="Search crypto..." />
+          <button type="submit">Search</button>
+        </form>
       </div>
     </div>
   );
