@@ -11,7 +11,7 @@ const Navbar = () => {
         <li>Home</li>
         <li>Features</li>
         <li>Pricing</li>
-        <li>Blog</li>
+        <li>Pairs</li>
       </ul>
 
       {/* right-side */}
