@@ -20,13 +20,19 @@ const Home = () => {
           Largest Crypto <br /> Resource Center
         </h1>
         <p>
-          Welcome to the world's top leading knowledge center for
-          cryptocurrency! Come see why we've been voted the 9th ranking trading
-          exchange for the past 69 years!
+          Welcome to the world's largest knowledge center for all things
+          cryptocurrency. Come see why we've been ranked the 9th leading trading
+          exchange by The Food Network Channel for the past 10 years!
           <br />
           <br />
-          Sign up now to learn more about the world of cryptocurrency and
-          explore <em>some</em> of our features!
+          Sign up now to explore and learn more about the world of
+          cryptocurrency. Fully paid members have the opportunity to enjoy{" "}
+          <em>some</em> of our features.
+          <br />
+          <br />
+          <button className="signup-btn">
+            <h3 className="signup">Sign up now!</h3>
+          </button>
         </p>
         {/* search */}
         <form>
@@ -38,7 +44,8 @@ const Home = () => {
       <div className="crypto-table">
         <div className="table-layout">
           <p>#</p>
-          <p>Coins</p>
+          <p>Coin</p>
+          <p>Symbol</p>
           <p>Price</p>
           <p style={{ textAlign: "center" }}>24H Change</p>
           <p style={{ textAlign: "center" }}>24H Change %</p>
@@ -46,16 +53,17 @@ const Home = () => {
         </div>
 
         {/*map through displayCoins to display each coin*/}
-        {displayCoins.slice(0, 10).map((item, index) => (
+        {displayCoins.slice(0, 20).map((item, index) => (
           <div className="table-layout" key={index}>
             <p>{item.market_cap_rank}</p>
 
             {/*coin name and symbol*/}
             <div>
-              <img src={item.image} alt="image-logo" />
-              <p className="symbol">{item.name + " - $" + item.symbol}</p>
+              <img className="image-logo" src={item.image} alt="image-logo" />
+              <p className="coin">{item.name}</p>
             </div>
-
+            {/*symbol*/}
+            <p className="symbol">${item.symbol}</p>
             {/*price*/}
             <p>
               {currency.symbol} {item.current_price}
