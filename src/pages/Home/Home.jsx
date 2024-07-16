@@ -17,7 +17,7 @@ const Home = () => {
     <div className="home">
       <div className="hero">
         <h1>
-          Largest Crypto <br /> Resource Center
+          Welcome To <br /> Crypto Clique 🚀
         </h1>
         <p>
           Welcome to the world's largest knowledge center for all things
@@ -27,7 +27,8 @@ const Home = () => {
           <br />
           Sign up now to explore and learn more about the world of
           cryptocurrency. Fully paid members have the opportunity to enjoy{" "}
-          <em>some</em> of our features.
+          <em style={{ fontSize: "smaller" }}>some</em> of our features and
+          benefits.
           <br />
           <br />
           <button className="signup-btn">
@@ -49,7 +50,7 @@ const Home = () => {
           <p>Price</p>
           <p>24H Change</p>
           <p>24H Change %</p>
-          <p>Marketcap</p>
+          <p className="market-cap">Marketcap</p>
         </div>
 
         {/*map through displayCoins to display each coin*/}
@@ -72,12 +73,15 @@ const Home = () => {
             {/*24H change*/}
             <p className="price-change">
               {currency.symbol}
-              {Math.floor(item.price_change_24h * 100)}
+              {Math.floor(item.price_change_24h * 100).toLocaleString()}
             </p>
             {/*24H change %*/}
-            <p className="price-change-percentage">
+            <p
+              className={item.price_change_percentage_24h > 0 ? "green" : "red"}
+            >
               {Math.round(item.price_change_percentage_24h * 100) / 100}%
             </p>
+
             {/*marketcap*/}
             <p className="market-cap">
               {currency.symbol}
