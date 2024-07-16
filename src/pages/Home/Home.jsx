@@ -17,7 +17,7 @@ const Home = () => {
     <div className="home">
       <div className="hero">
         <h1>
-          Largest Crypto <br /> Resource Center
+          Welcome To <br /> Crypto Clique 🚀
         </h1>
         <p>
           Welcome to the world's largest knowledge center for all things
@@ -27,7 +27,8 @@ const Home = () => {
           <br />
           Sign up now to explore and learn more about the world of
           cryptocurrency. Fully paid members have the opportunity to enjoy{" "}
-          <em>some</em> of our features.
+          <em style={{ fontSize: "smaller" }}>some</em> of our features and
+          benefits.
           <br />
           <br />
           <button className="signup-btn">
@@ -47,14 +48,14 @@ const Home = () => {
           <p>Coin</p>
           <p>Symbol</p>
           <p>Price</p>
-          <p style={{ textAlign: "center" }}>24H Change</p>
-          <p style={{ textAlign: "center" }}>24H Change %</p>
+          <p>24H Change</p>
+          <p>24H Change %</p>
           <p className="market-cap">Marketcap</p>
         </div>
 
         {/*map through displayCoins to display each coin*/}
         {displayCoins.slice(0, 20).map((item, index) => (
-          <div className="table-layout" key={index}>
+          <div className="table-layout " key={index}>
             <p>{item.market_cap_rank}</p>
 
             {/*coin name and symbol*/}
@@ -65,8 +66,26 @@ const Home = () => {
             {/*symbol*/}
             <p className="symbol">${item.symbol}</p>
             {/*price*/}
-            <p>
-              {currency.symbol} {item.current_price}
+            <p className="price">
+              {currency.symbol}
+              {Math.round(item.current_price * 100) / 100}
+            </p>
+            {/*24H change*/}
+            <p className="price-change">
+              {currency.symbol}
+              {Math.floor(item.price_change_24h * 100).toLocaleString()}
+            </p>
+            {/*24H change %*/}
+            <p
+              className={item.price_change_percentage_24h > 0 ? "green" : "red"}
+            >
+              {Math.round(item.price_change_percentage_24h * 100) / 100}%
+            </p>
+
+            {/*marketcap*/}
+            <p className="market-cap">
+              {currency.symbol}
+              {item.market_cap.toLocaleString()}
             </p>
           </div>
         ))}
