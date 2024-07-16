@@ -20,9 +20,9 @@ const Home = () => {
           Largest Crypto <br /> Resource Center
         </h1>
         <p>
-          Welcome to the world's top leading knowledge center for
-          cryptocurrency! Come see why we've been voted the 9th ranking trading
-          exchange for the past 69 years!
+          Welcome to the world's top leading knowledge center for all things
+          cryptocurrency. Come see why we've been voted the 9th ranking exchange
+          for the past few weeks!
           <br />
           <br />
           Sign up now to learn more about the world of cryptocurrency and
@@ -38,7 +38,7 @@ const Home = () => {
       <div className="crypto-table">
         <div className="table-layout">
           <p>#</p>
-          <p>Coins</p>
+          <p>Coin</p>
           <p>Price</p>
           <p style={{ textAlign: "center" }}>24H Change</p>
           <p style={{ textAlign: "center" }}>24H Change %</p>
@@ -52,8 +52,8 @@ const Home = () => {
 
             {/*coin name and symbol*/}
             <div>
-              <img src={item.image} alt="image-logo" />
-              <p className="symbol">{item.name + " - $" + item.symbol}</p>
+              <img className="image-logo" src={item.image} alt="image-logo" />
+              <p className="symbol">{item.name + " $" + item.symbol}</p>
             </div>
 
             {/*price*/}
