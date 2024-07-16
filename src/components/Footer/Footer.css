@@ -1,10 +1,10 @@
 .footer {
   background-color: #4a5c6e;
-  padding: 20px 0;
+  padding: 10px 0;
   text-align: center;
   margin: auto;
   width: 100%;
-  line-height: 1.5;
+  line-height: 25px;
   height: 60px;
   color: #fff;
   font-size: 1rem;
@@ -14,4 +14,10 @@
 
 .footer section {
   font-size: 0.6rem;
+}
+
+.logo-name {
+  color: gold;
+  text-transform: uppercase;
+  font-weight: 700;
 }

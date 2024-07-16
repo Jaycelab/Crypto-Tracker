@@ -45,7 +45,7 @@ const Home = () => {
       <div className="crypto-table">
         <div className="table-layout">
           <p>#</p>
-          <p>Coin</p>
+          <p className="coin">Coin</p>
           <p>Symbol</p>
           <p>Price</p>
           <p>24H Change</p>
@@ -61,7 +61,7 @@ const Home = () => {
             {/*coin name and symbol*/}
             <div>
               <img className="image-logo" src={item.image} alt="image-logo" />
-              <p className="coin">{item.name}</p>
+              <p> {item.name}</p>
             </div>
             {/*symbol*/}
             <p className="symbol">${item.symbol}</p>
