@@ -27,7 +27,6 @@ const Navbar = () => {
       case "cad":
         setCurrency({ name: "cad", symbol: "C$" });
         break;
-
       default: {
         setCurrency({ name: "usd", symbol: "$" });
         break;

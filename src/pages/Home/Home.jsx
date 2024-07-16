@@ -47,14 +47,14 @@ const Home = () => {
           <p>Coin</p>
           <p>Symbol</p>
           <p>Price</p>
-          <p style={{ textAlign: "center" }}>24H Change</p>
-          <p style={{ textAlign: "center" }}>24H Change %</p>
-          <p className="market-cap">Marketcap</p>
+          <p>24H Change</p>
+          <p>24H Change %</p>
+          <p>Marketcap</p>
         </div>
 
         {/*map through displayCoins to display each coin*/}
         {displayCoins.slice(0, 20).map((item, index) => (
-          <div className="table-layout" key={index}>
+          <div className="table-layout " key={index}>
             <p>{item.market_cap_rank}</p>
 
             {/*coin name and symbol*/}
@@ -65,8 +65,23 @@ const Home = () => {
             {/*symbol*/}
             <p className="symbol">${item.symbol}</p>
             {/*price*/}
-            <p>
-              {currency.symbol} {item.current_price}
+            <p className="price">
+              {currency.symbol}
+              {Math.round(item.current_price * 100) / 100}
+            </p>
+            {/*24H change*/}
+            <p className="price-change">
+              {currency.symbol}
+              {Math.floor(item.price_change_24h * 100)}
+            </p>
+            {/*24H change %*/}
+            <p className="price-change-percentage">
+              {Math.round(item.price_change_percentage_24h * 100) / 100}%
+            </p>
+            {/*marketcap*/}
+            <p className="market-cap">
+              {currency.symbol}
+              {item.market_cap.toLocaleString()}
             </p>
           </div>
         ))}
