@@ -120,7 +120,8 @@
   .navbar button img {
     width: 10px;
   }
-  
+}
+
 @media (max-width: 600px) {
   .navbar {
     padding: 20px 3%;
