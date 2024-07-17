@@ -91,8 +91,8 @@
 
 .table-layout {
   display: grid;
-  grid-template-columns: 0.2fr 1.3fr 1fr 1fr 1.5fr 1.5fr 1fr;
-  padding: 20px 8px;
+  grid-template-columns: 0.2fr 1.3fr 1fr 1fr 1.5fr 1.5fr 1.5fr;
+  padding: 20px 20px;
   align-items: center;
 
   border-bottom: 1px solid #4a5c6e;
@@ -102,6 +102,15 @@
 .table-layout:first-child {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+.coin {
+  display: flex;
+;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  
 }
 
 .price {  
@@ -127,18 +136,19 @@ text-align: center;
 .image-logo {
   width: 30px;
   height: 30px;
+  margin:0 5px;
 }
 
 .symbol {
-padding: 0 2px;
+  padding: 0 10px;
   text-transform: uppercase;
-  font-size: 1rem;
+
   display: flex;
   align-items: center;
 }
 
 .market-cap {
-text-align: right;
+text-align: center;
 
 }
 
@@ -161,4 +171,54 @@ text-align: center;
 .table-layout .red {
   color: #ff0000;
 text-align: center;
+}
+
+@media (max-width: 900px) {
+  .crypto-table {
+    max-width: 100%;
+    border-radius: 0;
+    text-align: center;
+
+  }
+
+  .table-layout {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 15px 5px;
+    gap: 20px;
+ 
+  
+   font-size: 1rem;
+  }
+  .image-logo {
+    width: 25px;
+    height: 25px;
+ 
+
+  }
+.symbol-header {
+  display: none;
+}
+
+  .price-header {
+    display: none;
+}
+  .symbol {
+    display: none;
+  }
+
+  .market-cap {
+    display: none;
+  }
+
+
+  .price-change{
+    display: none;
+  }
+
+
+  .hero form input {
+    width: 100%;
+  }
+
+ 
 }
