@@ -19,5 +19,12 @@
 .logo-name {
   color: gold;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 5px 5px;
+    font-size: small;
+  }
 }

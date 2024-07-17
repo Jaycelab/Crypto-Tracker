@@ -18,6 +18,7 @@ a {
 
 .app {
   min-height: 100vh;
+  width: 100dvw;
   color: white;
   background: radial-gradient(
     circle at -4% -12.9%,

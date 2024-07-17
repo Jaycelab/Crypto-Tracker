@@ -46,10 +46,10 @@ const Home = () => {
         <div className="table-layout">
           <p>#</p>
           <p className="coin">Coin</p>
-          <p>Symbol</p>
+          <p className="symbol-header">Symbol</p>
           <p>Price</p>
-          <p>24H Change</p>
-          <p>24H Change %</p>
+          <p className="price-change">24H Change</p>
+          <p className=" price-change-percentage ">24H Change %</p>
           <p className="market-cap">Marketcap</p>
         </div>
 

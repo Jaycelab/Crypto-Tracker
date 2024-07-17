@@ -73,3 +73,76 @@
 .navbar button img {
   width: 12px;
 }
+
+/*Responsive */
+/* nav */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 20px 8%;
+  }
+
+  .navbar .logo {
+    width: max(15vw, 120px);
+  }
+
+  .navbar button {
+    padding: 10px 0.5rem;
+    font-size: 14px;
+    gap: 5px;
+  }
+
+  .nav-right {
+    gap: 20px;
+  }
+
+  .navbar select {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 5%;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .nav-right {
+    gap: 20px;
+  }
+
+  .navbar select {
+    display: block;
+  }
+
+  .navbar button img {
+    width: 10px;
+  }
+  
+@media (max-width: 600px) {
+  .navbar {
+    padding: 20px 3%;
+  }
+
+  .navbar .logo {
+    width: max(20vw, 120px);
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .nav-right {
+    gap: 10px;
+  }
+
+  .navbar select {
+    display: block;
+  }
+
+  .navbar button img {
+    width: 8px;
+  }
+}
