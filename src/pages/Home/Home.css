@@ -80,6 +80,7 @@
 
 }
 
+/* media query table */
 .crypto-table {
   max-width: 800px;
   margin: 0 auto;
@@ -173,7 +174,7 @@ text-align: center;
 text-align: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .crypto-table {
     max-width: 100%;
     border-radius: 0;
