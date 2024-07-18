@@ -26,3 +26,15 @@ a {
     rgb(30, 33, 48) 90.2%
   );
 }
+
+@media (max-width: 768px) {
+  .app {
+    padding: 0 auto;
+    overflow-x: hidden;
+    height: 150px;
+  }
+
+  .app::-webkit-scrollbar {
+    display: none;
+  }
+}
