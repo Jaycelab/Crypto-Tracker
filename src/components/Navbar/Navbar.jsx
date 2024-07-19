@@ -42,7 +42,6 @@ const Navbar = () => {
         <li>Trade</li>
         <li>Profits</li>
         <li>Technical Analysis</li>
-        <li>Contact</li>
       </ul>
 
       {/* right-side */}

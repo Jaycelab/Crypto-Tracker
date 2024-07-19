@@ -5,6 +5,39 @@ import { CoinContext } from "../../context/CoinContext";
 const Home = () => {
   const { allCoins, currency } = useContext(CoinContext);
   const [displayCoins, setDisplayCoins] = useState([]);
+  {
+    /*search coin state*/
+  }
+  const [input, setInput] = useState("");
+
+  {
+    /*input handler to update input state*/
+  }
+
+  const inputHandler = (e) => {
+    setInput(e.target.value);
+    {
+      /*if input is empty, display top 20 coins*/
+    }
+    if (e.target.value === "") {
+      setDisplayCoins(allCoins);
+    }
+  };
+
+  const searchHandler = async (e) => {
+    event.preventDefault();
+    {
+      /*filter through allCoins to find coins that match the input*/
+    }
+    const coins = await allCoins.filter((item) => {
+      return item.name.toLowerCase().includes(input.toLowerCase());
+    });
+    {
+      /*update displayCoins with the filtered coins*/
+    }
+
+    setDisplayCoins(coins);
+  };
 
   {
     /*useEffect to update displayCoins when allCoins gets updated*/
@@ -36,8 +69,22 @@ const Home = () => {
           </button>
         </p>
         {/* search */}
-        <form>
-          <input type="text" placeholder="Search crypto..." />
+        <form onSubmit={searchHandler}>
+          <input
+            onChange={inputHandler}
+            list="coinlist"
+            value={input}
+            type="text"
+            placeholder="Search coin..."
+            required
+          />
+          {/*datalist dropdown of all coins api*/}
+          <datalist id="coinlist">
+            {allCoins.map((item, index) => (
+              <option key={index} value={item.name} />
+            ))}
+          </datalist>
+
           <button type="submit">Search</button>
         </form>
       </div>

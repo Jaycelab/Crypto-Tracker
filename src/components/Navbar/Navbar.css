@@ -79,6 +79,7 @@
 @media (max-width: 900px) {
   .navbar {
     padding: 20px 8%;
+    gap: 20px;
   }
 
   .navbar .logo {
