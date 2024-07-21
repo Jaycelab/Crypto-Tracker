@@ -222,23 +222,22 @@ text-align: center;
 
   .hero form input {
     width: 100%;
+    font-style: inherit;
   }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+
   align-items: center;
   justify-content: center;
 }
 
   .hero button {
     width: 100%;
+
   }
 
-  .hero p {
-    width: 100%;
-}
- 
 }
 
