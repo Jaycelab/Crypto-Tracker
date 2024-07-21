@@ -83,7 +83,7 @@
 /* media query table */
 .crypto-table {
   max-width: 800px;
-  margin: 0 auto;
+  margin: -50px auto;
   
   background: linear-gradient(90deg, #4a5c6e 0%, #929da8 100%);
   border-radius: 15px;
@@ -224,5 +224,21 @@ text-align: center;
     width: 100%;
   }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+  .hero button {
+    width: 100%;
+  }
+
+  .hero p {
+    width: 100%;
+}
  
 }
+
