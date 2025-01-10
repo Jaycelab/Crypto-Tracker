@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <p>
-        Copyright @2024, <span className="logo-name">Crypto Clique</span> - All
+        Copyright @2025, <span className="logo-name">Crypto Clique</span> - All
         Rights Reserved
       </p>
       <section>Not Financial Advice Tho</section>
